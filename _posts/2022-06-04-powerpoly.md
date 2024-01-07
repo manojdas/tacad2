@@ -3,6 +3,10 @@ layout: post
 title:  "Perfect Power Polynomials"
 date:   2022-06-04
 categories: number-theory olympiad
+description: when is an intger-coefficient polynomial always a perfect power
+tags: 
+giscus_comments: false
+related_posts: false
 ---
 
 This post is about when an integer-coefficient polynomial is always a perfect power. Some notational conventions: we'll use $R[x]$ to denote the set of polynomials with coefficients in $R$, and $\nu_p(n)$ to mean the greatest power of $p$ dividing $n$. 
@@ -41,7 +45,7 @@ In order to prove this, we can use the Euclidean Algorithm.
 
 If we're trying to find the gcd of two *integers* $a$ and $b$, we know that $\gcd(a, b) = \gcd(a - kb, b)$ for any integer $k$. So then we can repeatedly replace the larger number with its remainder mod the smaller number until we end up with $\gcd(0, d) = d$ for some nonzero integer $d$. For example, \\[\gcd(20, 14) = \gcd(6, 14) = \gcd(6, 2) = \gcd(0, 2) = 2.\\]
 
-We can do the same thing with polynomials with *rational* coefficients &mdash; given any two polynomials with rational coefficients, in order to find their <span class='hidden' desc='gcd'>The gcd of two rational-coefficient polynomials is defined as the highest-degree monic polynomial (also with rational coefficients) which divides both of them in $\mathbb{Q}[x]$.</span> we can repeatedly replace the higher-degree one with its remainder mod the lower-degree one, until we end up with $\gcd(0, R) = R$ for some polynomial $R \in \mathbb{Q}[x]$. (The reason we're using *rational* coefficients rather than integer coefficients here is because we can't necessarily do polynomial division in $\mathbb{Z}[x]$ &mdash; if we're dividing by a non-monic polynomial, we may introduce fractions.)
+We can do the same thing with polynomials with *rational* coefficients &mdash; given any two polynomials with rational coefficients, in order to find their <span class='sd-hidden' desc='gcd'>The gcd of two rational-coefficient polynomials is defined as the highest-degree monic polynomial (also with rational coefficients) which divides both of them in $\mathbb{Q}[x]$.</span> we can repeatedly replace the higher-degree one with its remainder mod the lower-degree one, until we end up with $\gcd(0, R) = R$ for some polynomial $R \in \mathbb{Q}[x]$. (The reason we're using *rational* coefficients rather than integer coefficients here is because we can't necessarily do polynomial division in $\mathbb{Z}[x]$ &mdash; if we're dividing by a non-monic polynomial, we may introduce fractions.)
 
 <div class='example'> 
 	Find $\gcd(x^3 + 3x + 1, x^2 - 2)$. 
@@ -81,7 +85,7 @@ In fact, the following more general statement is true:
 	Let $f : \mathbb{N} \to \mathbb{Z}$ be a nonconstant function, such that $a - b \mid f(a) - f(b)$ for all positive integers $a$ and $b$. Prove that there are infinitely many primes $p$ such that $p$ divides $f(c)$ for some positive integer $c$. 
 </div>
 
-<div class='hidden' desc='Proof'>
+<div class='sd-hidden' desc='Proof'>
 	First, the given condition means that $f$ is mod-preserving &mdash; if $a \equiv b \pmod{n}$, then $f(a) \equiv f(b) \pmod{n}$ as well. 
 	<br/><br/>
 	Assume for contradiction that the only primes dividing $f(c)$, over all $c$, are $p_1$, $p_2$, $\ldots$, $p_r$. Now the idea is to construct a bunch of values of $n$ which have the same value of $f(n)$, by imposing conditions mod powers of these primes. 

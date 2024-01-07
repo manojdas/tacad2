@@ -2,7 +2,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
-        $( ".hidden" ).each(function( index ) {
+        $( ".sd-hidden" ).each(function( index ) {
         console.log( $( this ).attr('desc'))
         
         let btnLabel = $( this ).attr('desc') ? $( this ).attr('desc') : 'Hidden'
@@ -13,7 +13,7 @@
           console.log('btn2', $(this).text())
                 let par =  $(this).parent()
           console.log('par', par.text())
-            let hidden = par.find(".hidden")
+            let hidden = par.find(".sd-hidden")
           console.log('hidden', hidden.text())
     
           hidden.toggle()

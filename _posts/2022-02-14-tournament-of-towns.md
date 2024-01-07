@@ -3,6 +3,10 @@ layout: post
 title:  "Tournament of Towns"
 date:   2022-02-14
 categories: misc olympiad
+description: some cool problems from the Tournament of Towns
+tags: 
+giscus_comments: false
+related_posts: false
 ---
 
 The [Tournament of Towns](https://www.turgor.ru/en/problems/) is an international math olympiad based in Russia that runs twice a year. It has a junior and senior division, and O-level and A-level (according to the website, the A-level test is comparable with All-Russian MO or IMO difficulty; O-level is easier). I didn't know much about it as a contestant, but this winter I was looking at the problems, and it has a lot of cool problems &mdash; especially in combinatorics. 
@@ -13,7 +17,7 @@ Here are some problems from it that I like (although there are many other intere
 	Consider an increasing sequence of positive numbers \[\cdots < a_{-2} < a_{-1} < a_0 < a_1 < a_2 < \cdots,\] infinite in both directions. For a positive integer $k$ let $b_k$ be the minimal integer such that the ratio of the sum of any consecutive $k$ elements of the sequence to the largest of those $k$ elements is not greater than $b_k$. Prove that $b_1$, $b_2$, $b_3$, $\ldots$ either is $1$, $2$, $3$, $\ldots$ or is eventually constant.
 </div>
 
-<div class='hidden' desc='Solution'>
+<div class='sd-hidden' desc='Solution'>
 	First note that \[\frac{a_{i - k + 1} + a_{i - k + 2} + \cdots + a_i}{a_i} \leq \frac{ka_i}{a_i} \leq k\] for all $i$, so then $b_k \leq k$ for all $k$. Also, \[\frac{a_{i - k} + a_{i - k + 1} + \cdots + a_i}{a_i} \geq \frac{a_{i - k + 1} + \cdots + a_i}{a_i},\] so then $b_{k + 1} \geq b_k$ for all $k$. So it suffices to show that if $b_k \leq k - 1$ for some $k$, the $b_i$ are bounded. 
 	<br/><br/>
 	Let $s_i = a_{i - k + 2} + a_{i - k + 2} + \cdots + a_i$ for each integer $i$. 
@@ -30,7 +34,7 @@ Here are some problems from it that I like (although there are many other intere
 	Denote by $[n]!$ the product $1 \cdot 11 \cdot \underbrace{11\cdots 1}_{n}$. Prove that $[n + m]!$ is divisible by $[n]!\times[m]!$.
 </div>
 
-<div class='hidden' desc='Solution'>
+<div class='sd-hidden' desc='Solution'>
 	We have $[n]! = \frac{10 - 1}{9} \cdot \frac{10^2 - 1}{9} \cdots \frac{10^n - 1}{9}$, so it suffices to show \[\prod_{i = 1}^n (10^i - 1) \cdot \prod_{i = 1}^m (10^i - 1) \mid \prod_{i = 1}^{m + n} (10^i - 1).\] We'll show that for all primes $p$, $\nu_p$ of the RHS is at least $\nu_p$ of the LHS. 
 	<br/><br/>
 	Suppose $p$ is relatively prime to $10$ (otherwise $p$ cannot divide either side), and let $d = \operatorname{ord}_p 10$. Then only the terms with $i \mid d$ are relevant. If $ad$ and $bd$ are the greatest multiples of $d$ at most $n$ and $m$, respectively, then $(a + b)d \leq n + m$, so it suffices to show \[\sum_{i = 1}^a \nu_p(10^{id} - 1) + \sum_{i = 1}^b \nu_p(10^{id} - 1) \leq \sum_{i = 1}^{a + b} \nu_p(10^{id} - 1).\] But we have \[\nu_p(10^{id} - 1) = \nu_p(10^d - 1) + \nu_p(id) = \nu_p(10^d - 1) + \nu_p(i)\] by LTE. So it suffices to show \[\sum_{i = 1}^a \nu_p(i) + \sum_{i = 1}^b \nu_p(i) \leq \sum_{i = 1}^{a + b} \nu_p(i),\] which is true as $\binom{a + b}{a}$ is an integer.
@@ -40,13 +44,13 @@ Here are some problems from it that I like (although there are many other intere
 	Prove that for $n \geq 2$, the integer \[1^1 + 3^3 + 5^5 + \cdots + (2^n - 1)^{2^n - 1}\] is a multiple of $2^n$ but not a multiple of $2^{n + 1}$.
 </div>
 
-<div class='hidden' desc='Solution'>
+<div class='sd-hidden' desc='Solution'>
 	Induct on $n$. In the base case $n = 2$, $1^1 + 3^3 = 28$ is a multiple of $4$ but not $8$. 
 	<br/><br/>
 	Now suppose $n \geq 3$ and assume this is true for $n - 1$, so \[1^1 + 3^3 + \cdots + (2^{n - 1} - 1)^{2^{n - 1} - 1} \equiv 2^{n - 1} \pmod{2^n}.\] Now note that for all odd $x$, we have \[\nu_2(x^{2^{n - 1}} - 1) = \nu_2(x^2 - 1) + \nu_2(2^{n - 2}) \geq n + 1,\] so then $x^{2^{n - 1}}$ is always $1$ mod $2^{n + 1}$. So then \[(x + 2^{n - 1})^{x + 2^{n - 1}} \equiv (x + 2^{n - 1})^x \equiv x^x + x^x \cdot 2^{n - 1},\] since $2(n - 1) \geq n + 1$. So this means \[1^1 + 3^3 + \cdots + (2^n - 1)^{2^n - 1} \equiv (2 + 2^{n - 1})(1^1 + 3^3 + \cdots + (2^{n - 1} - 1)^{2^{n - 1} - 1}) \pmod{2^{n + 1}}.\] But $2 + 2^{n - 1}$ is even, and the second sum is $2^{n - 1}$ mod $2^n$ by the induction hypothesis, so then the original sum is $2^n$ mod $2^{n + 1}$, as desired.
 </div>
 
-<div class='hidden' desc='Comments'>
+<div class='sd-hidden' desc='Comments'>
 	It makes sense to induct because the sum is pretty intractable on its own, but when you lift from $2^n$ to $2^{n + 1}$, a lot of the terms are either the same or closely related. 
 </div>
 
@@ -54,7 +58,7 @@ Here are some problems from it that I like (although there are many other intere
 	Find all positive integers $n$ such that for every $k \geq n$, there is a number divisible by $n$ with sum of digits $k$.
 </div>
 
-<div class='hidden' desc='Solution'>
+<div class='sd-hidden' desc='Solution'>
 	The answer is all $n$ not divisible by $3$. First if $3$ divides $n$, then $3$ divides the sum of digits of all multiples of $n$. 
 	<br/><br/>
 	Now suppose $3 \nmid n$. Let $n = 2^a5^bm$ where $m$ is relatively prime to $10$; then it suffices to show $m$ has this property (as we can append enough $0$'s to multiples of $n$ to get multiples of $n$ with the same sum of digits). 
@@ -66,7 +70,7 @@ Here are some problems from it that I like (although there are many other intere
 	Petya and Vasya play the following game. Petya conceives a polynomial $P(x)$ having integer coefficients. On each move, Vasya pays him a coin, and calls an integer $a$ of his choice, which has not yet been called by him. Petya replies with the number of distinct integer solutions $x$ to $P(x) = a$. The game continues until Petya repeats an answer. What is the minimum amount of rubles Vasya must pay to guarantee a win?
 </div>
 
-<div class='hidden' desc='Solution'>
+<div class='sd-hidden' desc='Solution'>
 	The answer is $4$. Let $f(x)$ be the answer Petya gives when Vasya queries $x$. 
 	<br/><br/>
 	First we'll show that Vasya can win in $4$ turns. The main idea is to use $a - b \mid P(a) - P(b)$ and query consecutive values for $P$ &mdash; this means if $P(a) = P(b) + 1$, then $a = b\pm 1$. 
@@ -90,7 +94,7 @@ Here are some problems from it that I like (although there are many other intere
 	Some of the integers $1$, $2$, $\ldots$, $n$ have been colored red so that for each triplet of red numbers $a$, $b$, $c$ (not necessarily distinct), if $a(b - c)$ is a multiple of $n$ then $b = c$. Prove that there are no more than $\varphi(n)$ red numbers.
 </div>
 
-<div class='hidden' desc='Solution'>
+<div class='sd-hidden' desc='Solution'>
 	Let $p_1 < p_2 < \cdots < p_r$ be the primes dividing $n$ which divide some red number, and $q_1$, $q_2$, $\ldots$, $q_s$ the primes dividing $n$ which don't divide any red number. If $r = 0$ then all red numbers are relatively prime to $n$ so there are at most $\varphi(n)$ red numbers; now assume $r \geq 1$. 
 	<div class='claim-un'>
     	There are at most $\frac{n}{p_r} \cdot \prod \frac{q_i - 1}{q_i}$ red numbers. 
@@ -101,7 +105,7 @@ Here are some problems from it that I like (although there are many other intere
 	But we have \[\varphi(n) = n \cdot \prod_{i = 1}^r \frac{p_i - 1}{p_i} \cdot \prod_{i = 1}^s \frac{q_i - 1}{q_i}.\] We have the bound \[\prod_{i = 1}^r \frac{p_i - 1}{p_i} \geq \prod_{i = 2}^{p_i} \frac{i - 1}{i} = \frac{1}{p_i},\] so then our bound on the count of red numbers is at most $\varphi(n)$.
 </div>
 
-<div class='hidden' desc='Comments'>
+<div class='sd-hidden' desc='Comments'>
 	You can start by trying small cases &mdash; here the small case is when we only have one prime dividing $n$ with a red multiple since having none gives exactly $\varphi(n)$. If we look at which residues are allowed then we get exactly $\frac{n}{p}\prod \frac{q - 1}{q}$. Then if we try to go to a more general case, we realize that there <em>isn't</em> really a much better bound we can get (at least, not one that I could find), so we probably still have to use this bound &mdash; and then thinking about size a bit finishes. 
 </div>
 
