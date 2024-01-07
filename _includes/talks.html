@@ -19,7 +19,7 @@
 {% endif %}
 <span class="links">
     {% if entry.notes %}
-    [<a href="{{ entry.notes | prepend: '/assets/pdf/notes/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Notes</a>]
+    [<a href="{{ entry.notes | prepend: '/assets/pdf/seminar_notes/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Notes</a>]
   {% endif %}
     {% if entry.arxiv %}
       [<a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arXiv</a>]
@@ -32,7 +32,7 @@
       [<a href="{{ entry.pdf }}" target="_blank">PDF</a>]
     {% endif %}
     {% if entry.supp %}
-      [<a href="{{ entry.supp | prepend: '/assets/pdf/notes/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">PDF</a>]
+      [<a href="{{ entry.supp | prepend: '/assets/pdf/seminar_notes/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">PDF</a>]
     {% endif %}
     {% if entry.code %}
       [<a href="{{ entry.code }}" target="_blank">Code</a>]
@@ -47,7 +47,7 @@
       [<a href="{{ entry.abstract }}" target="_blank">Abstract</a>]
     {% endif %}
     {% if entry.slides %}
-      [<a href="{{ entry.slides | prepend: '/assets/pdf/notes/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Slides</a>]
+      [<a href="{{ entry.slides | prepend: '/assets/pdf/seminar_notes/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Slides</a>]
     {% endif %}
     {% if entry.slideshare %}
       [<a href="{{ entry.slideshare }}" target="_blank">Slides</a>]
