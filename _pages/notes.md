@@ -3,7 +3,6 @@ layout: page
 permalink: /notes/
 title: notes
 description: Lecture notes from classes I have taken and notes from seminars I have attended.
-years: [2021, 2019, 2018, 2017, 2016, 2015, 2013]
 nav: true
 nav_order: 1
 series: [Combinatorics, Reading Group]
@@ -18,9 +17,11 @@ series: [Combinatorics, Reading Group]
 
 ### Lecture Notes
 <!-- <hr> -->
+{% assign notes = site.lecture_notes | sort: 'date' | reverse %}
+{% include lnotes.html notes=notes %}
 
 ### Combinatorics Seminar
-{% assign notes = site.seminar_notes | where: 'series', 'Combinatorics' | sort: 'date' | reverse%}
+{% assign notes = site.seminar_notes | where: 'series', 'Combinatorics' | sort: 'date' | reverse %}
 
 {% include talks.html talks=notes %}
 
@@ -28,7 +29,7 @@ series: [Combinatorics, Reading Group]
 
 
 ### Reading Group Seminar
-{% assign notes = site.seminar_notes | where: 'series', 'Reading Group' | sort: 'date' | reverse%}
+{% assign notes = site.seminar_notes | where: 'series', 'Reading Group' | sort: 'date' | reverse %}
 
 {% include talks.html talks=notes %}
 

@@ -180,6 +180,8 @@ collections:
     org: MIT
     courseno: 
     title:
+    subject:
+    date:
     term:
     status:
     notes:
