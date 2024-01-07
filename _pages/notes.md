@@ -20,27 +20,17 @@ series: [Combinatorics, Reading Group]
 <!-- <hr> -->
 
 ### Combinatorics Seminar
-    {% assign notes = site.seminar_notes | where: 'series', 'Combinatorics' | sort: 'date' %}
+{% assign notes = site.seminar_notes | where: 'series', 'Combinatorics' | sort: 'date' | reverse%}
 
-<ul class='sd-seminar-notes'>
-    {% for note in notes %}
-    <li>
-        {% include talks.html talk=note %}
-    </li>
-    {% endfor%}
-</ul>
+{% include talks.html talks=notes %}
+
+
 
 
 ### Reading Group Seminar
-    {% assign notes = site.seminar_notes | where: 'series', 'Reading Group' | sort: 'date' %}
+{% assign notes = site.seminar_notes | where: 'series', 'Reading Group' | sort: 'date' | reverse%}
 
-<ul class='sd-seminar-notes'>
-    {% for note in notes %}
-        <li>
-        {% include talks.html talk=note %}
-        </li>
-    {% endfor%}
-</ul>
+{% include talks.html talks=notes %}
 
 
 

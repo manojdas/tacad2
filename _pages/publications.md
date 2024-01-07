@@ -10,19 +10,14 @@ topics: [Combinatorics, Number theory]
 <!-- _pages/publications.md -->
 
 
+### Combinatorics
+{% assign papers = site.papers | where: 'topic', 'Combinatorics'  | sort: 'date' | reverse %}
+{% include pub.html papers=papers %}
 
-<div>
-{% for topic in page.topics %}
-    <h3> {{ topic }} </h3>
-    {% assign papers = site.papers | where: 'topic', topic  | sort: 'date' %}
-    <ul class="sd-papers">
-    {% for paper in papers %}
-        <li>
-        {% include pub.html pub=paper %}
-        </li>
-    {% endfor%}
-    </ul>
-{% endfor %}
-</div>
+### Number theory
+{% assign papers = site.papers | where: 'topic', 'Number theory'  | sort: 'date' | reverse %}
+{% include pub.html papers=papers %}
+
+
 
 

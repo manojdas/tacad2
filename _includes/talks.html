@@ -1,4 +1,6 @@
-{% assign entry = include.talk %}
+<ul class='sd-seminar-notes'>
+{% for entry in include.talks %}
+    <li>
 <div class="title">
     {{ entry.title }}
 </div>
@@ -51,3 +53,6 @@
       [<a href="{{ entry.slideshare }}" target="_blank">Slides</a>]
     {% endif %}
 </span>
+</li>
+{% endfor %}
+</ul>

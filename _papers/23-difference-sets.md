@@ -4,7 +4,7 @@ title: Bounds for the local properties problem for difference sets
 date: 2023-10-01
 pub:
 coauthors:
-arxiv: https://arxiv.org/abs/2310.13999
+arxiv: 2310.13999
 slides: jmm-fin.pdf
 poster:
 blog:

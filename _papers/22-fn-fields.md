@@ -4,7 +4,7 @@ title: The distribution of $k$-free effective divisors and the summatory totient
 date: 2022-07-10
 pub:
 coauthors: Hannah Lang, Hamilton Wan, and Nancy Xu
-arxiv: https://arxiv.org/abs/2207.00047
+arxiv: 2207.00047
 slides:
 poster:
 blog:

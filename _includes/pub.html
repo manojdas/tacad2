@@ -1,4 +1,6 @@
-{% assign entry = include.pub %}
+<ul class='sd-papers'>
+{% for entry in include.papers %}
+<li>
 <div class="title">
     {{ entry.title }}
 </div>
@@ -45,3 +47,6 @@
       [<a href="{{ entry.slideshare }}" target="_blank">Slides</a>]
     {% endif %}
 </span>
+</li>
+{% endfor %}
+</ul>
