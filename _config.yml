@@ -176,6 +176,37 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  lecture_notes:
+    org: MIT
+    courseno: 
+    title:
+    term:
+    status:
+    notes:
+    code:
+    site:
+    instructor:
+  seminar_notes:
+    title:
+    date:
+    status:
+    notes:
+    code:
+    site:
+    paper:
+    presenters:
+    series:  
+  papers:
+    topic:
+    title:
+    date:
+    pub:
+    coauthors:
+    arxiv:
+    slides:
+    poster:
+    blog:
+    video:
 
 announcements:
   enabled: true
@@ -413,38 +444,3 @@ jsonresume:
   - interests
   - references
 
-# ----------
-# Collections
-# -----------
-collections:
-  lecture_notes:
-    org: MIT
-    courseno: 
-    title:
-    term:
-    status:
-    notes:
-    code:
-    site:
-    instructor:
-  seminar_notes:
-    title:
-    date:
-    status:
-    notes:
-    code:
-    site:
-    paper:
-    presenters:
-    series:  
-  papers:
-    topic:
-    title:
-    date:
-    pub:
-    coauthors:
-    arxiv:
-    slides:
-    poster:
-    blog:
-    video:
