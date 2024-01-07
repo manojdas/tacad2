@@ -24,7 +24,9 @@ series: [Combinatorics, Reading Group]
 
 <ul class='sd-seminar-notes'>
     {% for note in notes %}
+    <li>
         {% include talks.html talk=note %}
+    </li>
     {% endfor%}
 </ul>
 
@@ -34,7 +36,9 @@ series: [Combinatorics, Reading Group]
 
 <ul class='sd-seminar-notes'>
     {% for note in notes %}
+        <li>
         {% include talks.html talk=note %}
+        </li>
     {% endfor%}
 </ul>
 
