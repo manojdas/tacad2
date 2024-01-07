@@ -6,6 +6,7 @@ description: Lecture notes from classes I have taken and notes from seminars I h
 years: [2021, 2019, 2018, 2017, 2016, 2015, 2013]
 nav: true
 nav_order: 1
+series: [Combinatorics, Reading Group]
 ---
 
 
@@ -15,35 +16,27 @@ nav_order: 1
 {:toc}
 
 
-## Lecture Notes
+### Lecture Notes
 <!-- <hr> -->
 
-
-
-
-
-## Combinatorics Seminar
-<!-- <hr> -->
-{% assign notes = site.seminar_notes | where: 'series', 'combinatorics' | sort: 'date' %}
+### Combinatorics Seminar
+    {% assign notes = site.seminar_notes | where: 'series', 'Combinatorics' | sort: 'date' %}
 
 <ul class='sd-seminar-notes'>
-{% for note in notes %}
-    <li>
-        <div class="title">
-            {{ note.title }}
-        </div>
-        <div class="author">
-            {{ note.presenters }}
-        </div>
-        <p class="post-meta">
-            {{ note.date | date: '%B %-d, %Y' }}
-        </p>
-    </li>
-{% endfor%}
+    {% for note in notes %}
+        {% include talks.html talk=note %}
+    {% endfor%}
 </ul>
 
 
+### Reading Group Seminar
+    {% assign notes = site.seminar_notes | where: 'series', 'Reading Group' | sort: 'date' %}
 
-## Reading Group Seminar
-<!-- <hr> -->
+<ul class='sd-seminar-notes'>
+    {% for note in notes %}
+        {% include talks.html talk=note %}
+    {% endfor%}
+</ul>
+
+
 

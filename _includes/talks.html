@@ -1,18 +1,24 @@
-{% assign entry = include.pub %}
+{% assign entry = include.talk %}
 <div class="title">
     {{ entry.title }}
 </div>
-{% if entry.coauthors %}
+{% if entry.presenters %}
     <div class="author">
-        with {{ entry.coauthors }}
+        {{ entry.presenters }}
     </div>
 {% endif %}
+<p class="post-meta">
+    {{ note.date | date: '%B %-d, %Y' }}
+</p>
 {% if entry.pub %}
     <div class="publication">
         <em>{{ entry.pub }}</em>
     </div>
 {% endif %}
 <span class="links">
+    {% if entry.notes %}
+    [<a href="{{ entry.notes | prepend: '/assets/pdf/notes/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Notes</a>]
+  {% endif %}
     {% if entry.arxiv %}
       [<a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arXiv</a>]
     {% endif %}
@@ -24,7 +30,7 @@
       [<a href="{{ entry.pdf }}" target="_blank">PDF</a>]
     {% endif %}
     {% if entry.supp %}
-      [<a href="{{ entry.supp | prepend: '/assets/pdf/papers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">PDF</a>]
+      [<a href="{{ entry.supp | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">PDF</a>]
     {% endif %}
     {% if entry.code %}
       [<a href="{{ entry.code }}" target="_blank">Code</a>]
@@ -39,7 +45,7 @@
       [<a href="{{ entry.abstract }}" target="_blank">Abstract</a>]
     {% endif %}
     {% if entry.slides %}
-      [<a href="{{ entry.slides | prepend: '/assets/pdf/papers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Slides</a>]
+      [<a href="{{ entry.slides | prepend: '/assets/pdf/notes/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Slides</a>]
     {% endif %}
     {% if entry.slideshare %}
       [<a href="{{ entry.slideshare }}" target="_blank">Slides</a>]
