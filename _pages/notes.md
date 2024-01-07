@@ -16,6 +16,7 @@ series: [Combinatorics, Reading Group]
 
 
 ### Lecture Notes
+Notes are published with the permission of the course staff, but please note that all course content is owned by MIT and the course instructors. All mistakes should be attributed to me (in transcription or interpretation -- they were not checked by instructors).
 <!-- <hr> -->
 {% assign notes = site.lecture_notes | sort: 'date' | reverse %}
 {% include lnotes.html notes=notes %}
